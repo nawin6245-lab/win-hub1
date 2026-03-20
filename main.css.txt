@@ -1,0 +1,307 @@
+/* 🌌 SPACE THEME */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #0b1d3a, #050d1a 70%);
+    color: #e0f7ff;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+header {
+    position: relative;
+    background: linear-gradient(rgba(5,13,26,0.7), rgba(5,13,26,0.9)),
+    url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1200') center/cover;
+    height: 500px;
+}
+
+/* ดาว overlay */
+header::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.ibb.co/5kRYX6K/stars.png') repeat;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+/* content อยู่หน้าดาว */
+header .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+nav .logo a {
+    font-size: 40px;
+    font-weight: 700;
+    color: #4fc3f7;
+    text-shadow: 0 0 10px #4fc3f7;
+    text-decoration: none;
+}
+
+/* Sign in */
+.sign-in {
+    font-size: 20px;
+    color: #4fc3f7;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.sign-in:hover {
+    text-shadow: 0 0 10px #4fc3f7, 0 0 20px #00e5ff;
+    transform: scale(1.1);
+}
+
+/* HEADER TEXT */
+.header-info {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.header-info h1 {
+    font-size: 45px;
+    color: #00e5ff;
+    text-shadow: 0 0 10px #00e5ff, 0 0 20px #4fc3f7;
+}
+
+.header-info p {
+    font-size: 18px;
+    color: #b3e5fc;
+}
+
+/* 💎 LOGIN FORM */
+.login-form {
+    margin: 30px auto 0;
+    max-width: 320px;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 25px rgba(0,188,212,0.5);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.login-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 35px rgba(0,188,212,0.7);
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+}
+
+.login-form input::placeholder {
+    color: #b3e5fc;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg,#0288d1,#00bcd4);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00bcd4;
+    transition: 0.3s;
+}
+
+.login-form button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00bcd4, 0 0 30px #0288d1;
+}
+
+/* CREATE ACCOUNT */
+.create {
+    color: #b3e5fc;
+}
+
+.create a {
+    color: #00e5ff;
+    text-decoration: none;
+}
+
+.create a:hover {
+    color: #4fc3f7;
+}
+
+/* 🌊 WAVE */
+svg {
+    display: block;
+    margin-top: -5px;
+}
+
+/* 🪐 ABOUT */
+.about {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to top, #050d1a, #0b1d3a);
+    position: relative;
+}
+
+.about::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=1200') center/cover;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.about .container {
+    position: relative;
+    z-index: 1;
+}
+
+.about h2 {
+    color: #4fc3f7;
+}
+
+.about p {
+    color: #b3e5fc;
+}
+
+/* รูป */
+.about-img {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.about-img img {
+    width: 250px;
+    border-radius: 20px;
+    transition: 0.3s;
+    box-shadow: 0 0 20px rgba(0,188,212,0.4);
+}
+
+.about-img img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 35px #00e5ff;
+}
+
+
+
+
+
+.shop {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* PRODUCT LIST FLEXBOX */
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ============================= */
+/* PRODUCT CARD                  */
+/* ============================= */
+.product {
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    padding: 15px;
+    width: 220px;
+    min-height: 350px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-shadow: 0 0 15px rgba(0,188,212,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* HOVER EFFECT CARD */
+.product:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 15px 25px rgba(0,188,212,0.5), 0 0 35px rgba(0,188,212,0.3);
+}
+
+/* PRODUCT IMAGE */
+.product img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* PRODUCT INFO */
+.product-info {
+    min-height: 100px; /* ล็อกพื้นที่ชื่อ+ราคาให้เท่ากัน */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.product-info h3 {
+    min-height: 50px;
+    margin: 5px 0;
+}
+
+.product-info p {
+    min-height: 30px;
+    margin: 0;
+}
+
+/* ============================= */
+/* BUY BUTTON (PRO STYLE)        */
+/* ============================= */
+.product button {
+    margin-top: auto;
+    padding: 12px 0;
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+
+    background: linear-gradient(135deg, #00bcd4, #0288d1);
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,188,212,0.6), 0 0 20px rgba(0,188,212,0.3);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.product button:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: linear-gradient(135deg, #0288d1, #00bcd4);
+    box-shadow: 0 10px 20px rgba(0,188,212,0.7), 0 0 25px rgba(0,188,212,0.5);
+}
+
+/* ============================= */
+/* RESPONSIVE                     */
+/* ============================= */
+@media (max-width: 768px) {
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}

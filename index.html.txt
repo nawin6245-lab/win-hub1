@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game website</title>
+
+    <!-- ฟอนต์ -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body onload="checkLogin()">
+
+<header>
+    <div class="container">
+        <!-- NAVBAR -->
+        <nav>
+            <div class="logo">
+                <a href="#">WIN HUB</a>
+            </div>
+
+            <div class="menu-link">
+                <a href="login.html" class="sign-in">Sign in</a>
+            </div>
+        </nav>
+
+        <!-- HEADER INFO -->
+        <div class="header-info">
+            <div class="login-form">
+                <input type="text" id="login-username" placeholder="Username">
+                <input type="password" id="login-password" placeholder="Password">
+                <button onclick="login()">Login</button>
+
+                <p class="create">
+                    Don't have an account?
+                    <a href="register.html">Create account</a>
+                </p>
+            </div>
+
+            <h1 id="welcomeMsg">Welcome to WIN HUB 🎮</h1>
+            <p id="loginStatus"></p>
+        </div>
+    </div>
+</header>
+
+<!-- 🌊 WAVE -->
+<svg viewBox="0 0 1440 320">
+    <path fill="#0f2027"
+        d="M0,160L80,186.7C160,213,320,267,480,272C640,277,800,235,960,224C1120,213,1280,235,1360,245.3L1440,256V320H0Z">
+    </path>
+</svg>
+
+<!-- 🪐 ABOUT -->
+<section class="about">
+    <div class="container">
+        <h2>Cheap Game Accounts</h2>
+        <p>Trusted shop, fast delivery, safe and secure</p>
+
+        <div class="about-img">
+            <img src="https://i.ebayimg.com/images/g/9XcAAOSwegVnhbpu/s-l400.jpg">
+            <img src="https://cdn.shopify.com/s/files/1/0830/7635/0259/files/bf-dsn-dlc_fruit_box-physical.png">
+            <img src="https://littlethingsme.com/cdn/shop/files/CP3310_000_001.png?v=1748486550">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaieshQ6fJ1XgHPIEAJ5Y7OsiygnZVRg5sog&s">
+        </div>
+    </div>
+</section>
+
+<button onclick="logout()">Logout</button>
+
+<script src="script.js"></script>
+
+<script>
+function checkLogin() {
+    const loggedInUser = localStorage.getItem("loggedInUser");
+
+    if (!loggedInUser) {
+        document.getElementById("loginStatus").innerText = "ยังไม่ได้ล็อกอิน";
+    } else {
+        document.getElementById("welcomeMsg").innerText = "Hello, " + loggedInUser + "!";
+        document.getElementById("loginStatus").innerText = "คุณล็อกอินแล้ว!";
+    }
+}
+</script>
+    
+
+<section class="shop">
+    <h2>สินค้า</h2>
+
+    <div class="product-list">
+
+        <!-- สินค้า 1 -->
+        <div class="product">
+            <img src="https://i.ebayimg.com/images/g/9XcAAOSwegVnhbpu/s-l400.jpg">
+
+            <div class="product-info">
+                <h3>Game Account 1</h3>
+                <p>ราคา: 35 บาท</p>
+            </div>
+
+            <button>Buy</button>
+        </div>
+
+        <!-- สินค้า 2 -->
+        <div class="product">
+            <img src="https://cdn.shopify.com/s/files/1/0830/7635/0259/files/bf-dsn-dlc_fruit_box-physical.png">
+
+            <div class="product-info">
+                <h3>Game Account 2</h3>
+                <p>ราคา: 15 บาท</p>
+            </div>
+
+            <button>Buy</button>
+        </div>
+
+        <!-- สินค้า 3 -->
+        <div class="product">
+            <img src="https://littlethingsme.com/cdn/shop/files/CP3310_000_001.png?v=1748486550">
+
+            <div class="product-info">
+                <h3>Game Account 3</h3>
+                <p>ราคา: 20 บาท</p>
+            </div>
+
+            <button>Buy</button>
+        </div>
+
+    </div>
+</section>
